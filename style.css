@@ -1,0 +1,93 @@
+
+body{
+    margin: 0 2rem;
+}
+.titulo{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2rem 0;
+}
+.b-busqueda{
+    text-align: center;
+    
+
+}
+.btn-buscar{
+    background-color: #ADFA1D;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+}
+.input-text{
+    font-size: 1.5rem;
+}
+.a-lista{
+    width: 70%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+
+}
+.card{
+    text-align: center;
+    width: 100%;
+    border-radius: .5rem;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    /* border: 0.5px #000 solid */
+}
+.card h3{
+    font-size: small;
+}
+img{
+  width: 100%;       /* Para que ocupe el ancho disponible */
+  height: auto;      /* Mantiene la proporción */
+  max-width: 200px;  /* Limita el tamaño máximo si querés */
+  object-fit: cover; /* Corta la imagen para que se vea completa sin deformarse */
+  border-radius: 10px;
+
+  
+}
+
+.af-list{
+    width: 30%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    
+    height: 45rem;   /* 🔹 altura máxima */
+    overflow-y: auto;    /* 🔹 activa el scroll vertical */
+    padding-right: 5px;  /* opcional: evita que el scroll tape contenido */
+    
+}
+.af-card{
+    text-align: center;
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    margin: 0 1rem;
+
+    overflow: hidden;
+transition: all 0.5s ease; /* suaviza el cambio */
+  border-radius: 8px;
+  cursor: pointer;
+}
+.af-card h3{
+    font-size: small;
+}
+.af-card:hover{
+     background-color: rgb(247, 69, 69);
+    transform: scale(1.05)
+}
+.contenedor-list{
+    display: flex;
+    gap: 2rem;
+}
