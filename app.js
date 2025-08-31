@@ -65,7 +65,7 @@ const mostrarResultados = (lista) => {
 // ===============================
 const getAnimes = async (name) => {
     // Petición a la API con el nombre escrito
-    const res = await fetch(`https://api.jikan.moe/v4/anime?q=${name}&limit=5`);
+    const res = await fetch(`https://api.jikan.moe/v4/anime?q=${name}&limit=10`);
     const data = await res.json();
     const animes = data.data
 
