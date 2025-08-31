@@ -83,7 +83,6 @@ const getAnimes = async (name) => {
     console.log(datosReduce)
 }
 
-
 // ==========================================
 // FUNCIÓN PARA GUARDAR UN ANIME EN FAVORITOS
 // ==========================================
@@ -101,9 +100,11 @@ const guardarAnime = (e) => {
     const existe = listGuardado.some(anime => anime.titulo === fAnime.titulo)
     if (!existe) {
         listGuardado.push(fAnime)
+        // Guardamos en el localStorage
+        localStorage.setItem("favoritos", JSON.stringify(listGuardado))
         // Volvemos a renderizar los favoritos actualizados
         renderFavoritos()
-    }else{
+    } else {
         alert("Ya existe en favoritos")
     }
 }
@@ -142,6 +143,7 @@ const renderFavoritos = () => {
 const deletFavorito = (e) => {
     // Filtramos la lista de favoritos y eliminamos el clickeado
     listGuardado = listGuardado.filter(anime => anime.titulo != e.target.alt)
+        localStorage.setItem("favoritos", JSON.stringify(listGuardado))
 
     // Volvemos a renderizar la lista de favoritos actualizada
     renderFavoritos()
@@ -152,3 +154,9 @@ const deletFavorito = (e) => {
 // EVENTO PARA EL BOTÓN DE BÚSQUEDA
 // ======================================
 btn.addEventListener('click', () => buscadorName())
+
+window.addEventListener("DOMContentLoaded", () => {
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    listGuardado = favoritos;
+    renderFavoritos()
+})
