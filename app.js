@@ -154,7 +154,7 @@ const deletFavorito = (e) => {
 // EVENTO PARA EL BOTÓN DE BÚSQUEDA
 // ======================================
 btn.addEventListener('click', () => buscadorName())
-
+// Evento al cargar el doom
 window.addEventListener("DOMContentLoaded", () => {
     const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     listGuardado = favoritos;

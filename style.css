@@ -5,6 +5,10 @@ body{
     background-color: #091B29;
 }
 
+.contenedor-list{
+    display: flex;
+    gap: 2rem;
+}
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -24,6 +28,9 @@ body{
 .titulo{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 2rem 0;
+}
+.titulo h1{
+    margin-bottom: 0;
 }
 .infoP{
     background-color: #1D1D1D;
@@ -62,7 +69,7 @@ body{
     width: 60%;
     margin: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -90,6 +97,7 @@ img{
 }
 
 .af-list{
+    text-align: center;
     width: 100%;
     margin: 1rem 0;
     display: grid;
@@ -105,11 +113,11 @@ img{
     
 }
 .af-card{
-    text-align: center;
-    width: 70%;
+   
+    width: 80%;
     border-radius: .5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-    margin: .5rem 1rem;
+    margin: .5rem auto;
 
     transition: all 0.5s ease; /* suaviza el cambio */
     border-radius: 8px;
@@ -119,10 +127,25 @@ img{
     font-size: small;
 }
 .af-card:hover{
-     background-color: rgb(247, 69, 69);
+     /* background-color: rgb(247, 69, 69); */
+     border: 1px #404562 solid;
     transform: scale(1.05)
 }
-.contenedor-list{
-    display: flex;
-    gap: 2rem;
+.autor-span{
+    color: #D8C36C;
+}
+.autor-p{
+    font-size: small;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .contenedor-list{
+        flex-direction: column;
+    }
+    .a-lista{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 }
