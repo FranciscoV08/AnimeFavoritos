@@ -10,15 +10,20 @@
 
 <body>
     <header class="titulo">
-        <h1>Buscador de animes</h1>
+        <h1 class="poppins-light">Buscador de animes</h1>
     </header>
 
     <main>
         <!-- Barra de busqueda -->
         <section class="b-busqueda">
-            <input class="input-text" id="inputAnime" placeholder="My Hero Academia" type="text">
+            <input class="input-text" id="inputAnime" placeholder="Tokyo Ghoul" type="text">
             <button class="btn-buscar" id="inputBtn">Buscar</button>
         </section>
+
+        <div class="infoP">
+            <p class="poppins-light-italic"><span class="poppins-bold">AVISO: </span> Busca tu Anime favorito y agregalo a tu lista personal, eliminar de tu lista precionando la imagen  </p>
+                        
+        </div>
 
         <div class="contenedor-list">
             <!-- Barra de resultados -->
@@ -26,9 +31,12 @@
 
             </section>
             <!-- section favoritos -->
-            <section class="af-list" id="favoritos">
+            <section>
                 <h2>Tus Favoritos</h2>
 
+                <section class="af-list" id="favoritos">
+
+                </section>
             </section>
 
         </div>

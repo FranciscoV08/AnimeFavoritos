@@ -1,29 +1,68 @@
 
 body{
-    margin: 0 2rem;
+    margin: 0 4rem;
+    color: white;
+    background-color: #091B29;
 }
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .titulo{
-    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 2rem 0;
 }
+.infoP{
+    background-color: #1D1D1D;
+    border: 3px #423D2C solid;
+    color: #D8C36C;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-radius: 8px;
+}
+
+.infoP p{
+    margin: 0 1rem;
+
+}
+.info p span{
+    font-weight: bold;
+
+}
 .b-busqueda{
-    text-align: center;
     
 
 }
 .btn-buscar{
-    background-color: #ADFA1D;
+    background-color: #30344A;
     border-radius: 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    
+    color: #a7b9ca;
+}
+.btn-buscar:hover{
+    background-color: #404562;
+    color: white;
 }
 .input-text{
     font-size: 1.5rem;
+    border-radius: 10px;
 }
 .a-lista{
-    width: 70%;
+    width: 60%;
     margin: 1rem 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -54,7 +93,7 @@ img{
 }
 
 .af-list{
-    width: 30%;
+    width: 100%;
     margin: 1rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -63,22 +102,21 @@ img{
     gap: 1rem;
 
     
-    height: 45rem;   /* 🔹 altura máxima */
+    max-height: 55rem;   /* 🔹 altura máxima */
     overflow-y: auto;    /* 🔹 activa el scroll vertical */
     padding-right: 5px;  /* opcional: evita que el scroll tape contenido */
     
 }
 .af-card{
     text-align: center;
-    width: 100%;
+    width: 70%;
     border-radius: .5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-    margin: 0 1rem;
+    margin: .5rem 1rem;
 
-    overflow: hidden;
-transition: all 0.5s ease; /* suaviza el cambio */
-  border-radius: 8px;
-  cursor: pointer;
+    transition: all 0.5s ease; /* suaviza el cambio */
+    border-radius: 8px;
+    cursor: pointer;
 }
 .af-card h3{
     font-size: small;
